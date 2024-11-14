@@ -20,3 +20,4 @@ This webpage is deployed to GitHub Pages.
 (https://97kaity.github.io/se_project_spots/)
 
 [-Video Attachment:]
+https://drive.google.com/file/d/1Z7pQHKbPlu_yKMY-OgJxdHTj5jJk-7HT/view?usp=sharing
