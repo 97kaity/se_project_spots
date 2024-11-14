@@ -72,7 +72,7 @@
 .profile__add-button {
   margin-left: auto;
   height: 52px;
-  width: 149px;
+  min-width: 149px;
   color: #fcf5e5;
   background-color: #212121;
   border-radius: 8px;
@@ -130,5 +130,6 @@
   .profile__edit-button {
     width: 107.34px;
     border-radius: 90px;
+    margin-left: 25px;
   }
 }
