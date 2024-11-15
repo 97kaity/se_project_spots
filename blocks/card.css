@@ -13,12 +13,11 @@
 }
 
 .card__like-button {
-  background-image: url(../images/Like\ Icon.svg);
+  background-image: url(../images/like-button.svg);
   height: 20px;
   width: 23px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
   margin-top: 12px;
   display: flex;
   justify-content: center;
@@ -53,6 +52,5 @@
     max-width: 250px;
     font-size: 16px;
     line-height: 1;
-    padding-top: 12px;
   }
 }
