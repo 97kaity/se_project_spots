@@ -38,6 +38,7 @@
   border: none;
   background-color: white;
   opacity: 40%;
+  cursor: pointer;
 }
 
 .modal__title {
