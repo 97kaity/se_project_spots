@@ -30,6 +30,12 @@
   opacity: 1;
 }
 
+.card__like-button_liked {
+}
+
+.card__like-button_liked:hover {
+}
+
 .card__title {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
