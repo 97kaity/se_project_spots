@@ -31,9 +31,30 @@
 }
 
 .card__like-button_liked {
+  background-image: url(../images/Liked.svg);
+  opacity: 1;
 }
 
 .card__like-button_liked:hover {
+  background-image: url(../images/Liked-hover.svg);
+}
+
+.card__trash-button {
+  background-image: url("../images/TrashDefault.svg");
+  height: 32px;
+  width: 32px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 371px;
+  position: absolute;
+}
+
+.card__trash-button:hover {
+  background-image: url("../images/TrashHover.svg");
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .card__title {
