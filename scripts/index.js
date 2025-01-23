@@ -64,20 +64,26 @@ function handleEditFormSubmit(evt) {
 
 function handleCardSubmitForm(evt) {
   evt.preventDefault();
-  const inputValues = { name: cardNameInput.value, link: cardLinkInput.value };
+  const inputValues = { name: cardNameInput.value, link: cardLinkInput.link };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(cardModal);
+}
+
+function handleCardTrashButton(evt) {
+  evt.preventDefault();
+  cardNameInput.value.remove();
+  cardLinkInput.value.remove();
 }
 
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
-
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
+  const cardTrashButton = cardElement.querySelector(".card__trash-button");
 
   cardNameEl.textContent = data.name;
   cardImage.alt = data.name;
@@ -86,6 +92,8 @@ function getCardElement(data) {
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button_liked");
   });
+
+  cardTrashButton.addEventListener("click", handleCardTrashButton);
 
   return cardElement;
 }
