@@ -25,10 +25,12 @@
   width: 100%;
   box-sizing: border-box;
   border-radius: 8px;
+  background-color: white;
 }
 
 .modal__container_type_preview {
   padding: 0;
+  background-color: transparent;
 }
 
 .modal__image {
