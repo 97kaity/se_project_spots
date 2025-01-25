@@ -78,9 +78,7 @@ function handleCardSubmitForm(evt) {
 }
 
 function handleCardTrashButton(evt) {
-  evt.preventDefault();
-  cardNameInput.value.remove();
-  cardLinkInput.value.remove();
+  evt.closest(".card").remove();
 }
 
 function getCardElement(data) {
