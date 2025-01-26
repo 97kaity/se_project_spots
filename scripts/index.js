@@ -32,7 +32,7 @@ const profileDescription = document.querySelector(".profile__description");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
-const modalCloseButton = editModal.querySelector(".modal__close-button");
+const editModalCloseButton = editModal.querySelector(".modal__close-button");
 const editModalNameInput = editModal.querySelector("#profile-name-input");
 const editModalDescriptionInput = editModal.querySelector(
   "#profile-description-input"
@@ -47,7 +47,7 @@ const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
-const previewModalClose = previewModal.querySelector(
+const previewModalCloseButton = previewModal.querySelector(
   ".modal__close_type_preview"
 );
 
@@ -85,12 +85,12 @@ function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
-  const cardNameEl = cardElement.querySelector(".card__title");
+  const cardNameElement = cardElement.querySelector(".card__title");
   const cardImage = cardElement.querySelector(".card__image");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   const cardTrashButton = cardElement.querySelector(".card__trash-button");
 
-  cardNameEl.textContent = data.name;
+  cardNameElement.textContent = data.name;
   cardImage.alt = data.name;
   cardImage.src = data.link;
 
@@ -118,7 +118,7 @@ profileEditButton.addEventListener("click", () => {
   openModal(editModal);
 });
 
-modalCloseButton.addEventListener("click", () => {
+editModalCloseButton.addEventListener("click", () => {
   closeModal(editModal);
 });
 
@@ -130,7 +130,7 @@ cardModalCloseButton.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
-previewModalClose.addEventListener("click", () => {
+previewModalCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
 

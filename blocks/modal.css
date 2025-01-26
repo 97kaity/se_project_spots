@@ -35,11 +35,12 @@
 .modal__container_type_preview {
   padding: 0;
   background-color: transparent;
+  margin: 0;
 }
 
 .modal__image {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   max-width: 80vw;
   max-height: 80vh;
   margin: 0;
@@ -149,9 +150,21 @@
     margin: 10px 0 34px;
   }
 
+  .modal__image {
+    border-radius: 4px;
+  }
+
   .modal__close-button {
     top: 12px;
     right: 12px;
+  }
+
+  .modal__close_type_preview {
+    top: 158px;
+    left: 264px;
+    right: 0;
+    height: 40px;
+    width: 40px;
   }
 
   .modal__label {
