@@ -14,6 +14,7 @@
 
 .card__like-button {
   background-image: url(../images/Like.svg);
+  background-repeat: no-repeat;
   height: 20px;
   width: 23px;
   border: none;
@@ -31,12 +32,14 @@
 }
 
 .card__like-button_liked {
-  background-image: url(../images/Liked.svg);
+  background-image: url("../images/Liked.svg");
+  background-color: transparent;
   opacity: 1;
+  background-repeat: no-repeat;
 }
 
 .card__like-button_liked:hover {
-  background-image: url(../images/Liked-hover.svg);
+  background-image: url("../images/Liked-hover.svg");
 }
 
 .card__trash-button {
