@@ -14,11 +14,11 @@
 
 .card__like-button {
   background-image: url(../images/Like.svg);
-  background-repeat: no-repeat;
   height: 20px;
   width: 23px;
   border: none;
   background-color: transparent;
+  background-repeat: no-repeat;
   margin-top: 12px;
   display: flex;
   justify-content: center;
@@ -33,13 +33,13 @@
 
 .card__like-button_liked {
   background-image: url("../images/Likedheart.svg");
-  background-color: transparent;
   background-repeat: no-repeat;
   opacity: 1;
 }
 
 .card__like-button_liked:hover {
   background-image: url("../images/Liked-hover.svg");
+  background-repeat: no-repeat;
 }
 
 .card__trash-button {
