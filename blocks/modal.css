@@ -32,7 +32,7 @@
   background-color: white;
 }
 
-.modal__container_type_preview {
+.modal__preview-container {
   padding: 0;
   background-color: transparent;
 }
@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 
-.modal__close_type_preview {
+.modal__preview-close-button {
   background: transparent url(../images/ModalPreviewCloseIcon.svg) center
     no-repeat;
   top: 0;
@@ -144,7 +144,12 @@
 
   .modal__container {
     padding: 12px;
-    max-width: fit-content;
+    width: 300px;
+  }
+
+  .modal__preview-container {
+    padding: 0;
+    width: 288px;
   }
 
   .modal__title {
@@ -154,6 +159,8 @@
 
   .modal__image {
     border-radius: 4px;
+    position: center;
+    max-width: 288px;
   }
 
   .modal__close-button {
@@ -161,9 +168,9 @@
     right: 12px;
   }
 
-  .modal__close_type_preview {
-    top: -30px;
-    left: 390px;
+  .modal__preview-close-button {
+    top: -35px;
+    right: 0;
   }
 
   .modal__label {
