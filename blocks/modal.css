@@ -117,12 +117,24 @@
   color: #212121 40%;
   border-radius: 8px;
   opacity: 60%;
+  margin: 8px 0 0;
 }
 
 .modal__input:hover {
   cursor: pointer;
   opacity: 100%;
   transition: 0.3s;
+}
+
+.modal__error {
+  display: block;
+  color: #ff0000;
+  opacity: 70%;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 8px;
 }
 
 .modal__submit-button {
@@ -133,6 +145,7 @@
   border-radius: 5%;
   cursor: pointer;
 }
+
 .modal__submit-button:hover {
   opacity: 80%;
 }
