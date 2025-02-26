@@ -1,24 +1,51 @@
 const showInputError = (formEl, inputEl, errorMsg) => {
-  const errorMsgID = inputEl.id + "-error";
-  const errorMsgEl = document.querySelector("#" + errorMsgID);
+  const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  console.log(errorMsgID);
+  inputEl.classList.add("modal__input_error");
+};
+
+const hideInputError = (formEl, inputEl) => {
+  const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
+  errorMsgEl.textContent = "";
+  inputEl.classList.remove("modal__input_error");
 };
 
 const checkInputValidity = (formEl, inputEl) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage);
+  } else {
+    hideInputError(formEl, inputEl);
   }
+};
+
+const hasInvalidInput = (inputList) => {
+  return inputList.some((input) => {
+    return !input.validity.valid;
+  });
+};
+
+function toggleButtonState(inputList, buttonEl) {
+  if (hasInvalidInput(inputList)) {
+    disableButton(buttonEl);
+  } else {
+    buttonEl.disabled = false;
+    buttonEl.classList.remove("modal__submit-button:disabled");
+  }
+}
+
+const disableButton = (buttonEl) => {
+  buttonEl.disabled = true;
+  buttonEl.classList.add("modal__submit-button:disabled");
 };
 
 const setEventListeners = (formEl) => {
   const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonElement = formEl.querySelector(".modal__button");
+  const buttonElement = formEl.querySelector(".modal__submit-button");
 
   toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {
-    inputElement.addEventListeners("input", function () {
+    inputElement.addEventListener("input", function () {
       checkInputValidity(formEl, inputElement);
       toggleButtonState(inputList, buttonElement);
     });
@@ -28,7 +55,7 @@ const setEventListeners = (formEl) => {
 const enableValidation = () => {
   const formList = document.querySelectorAll(".modal__form");
   formList.forEach((formEl) => {
-    setEventListeneres(formEl);
+    setEventListeners(formEl);
   });
 };
 

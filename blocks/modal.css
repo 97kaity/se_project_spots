@@ -126,6 +126,10 @@
   transition: 0.3s;
 }
 
+.modal__input_error {
+  border: 1px solid rgba(255, 0, 0, 0.6);
+}
+
 .modal__error {
   display: block;
   color: #ff0000;
@@ -148,6 +152,10 @@
 
 .modal__submit-button:hover {
   opacity: 80%;
+}
+
+.modal__submit-button:disabled {
+  opacity: 50%;
 }
 
 @media screen and (max-width: 627px) {
