@@ -138,7 +138,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  margin-top: 8px;
 }
 
 .modal__submit-button {
@@ -155,6 +154,10 @@
 }
 
 .modal__submit_button_disabled {
+  opacity: 50%;
+}
+
+.modal__submit_button_disabled:hover {
   opacity: 50%;
 }
 
