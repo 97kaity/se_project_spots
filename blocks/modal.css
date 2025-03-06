@@ -154,7 +154,7 @@
   opacity: 80%;
 }
 
-.modal__submit-button:disabled {
+.modal__submit_button_disabled {
   opacity: 50%;
 }
 

@@ -76,7 +76,7 @@ function handleCardSubmitForm(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
-  disableButton(cardSubmitButton);
+  disableButton(cardSubmitButton, settings);
   closeModal(cardModal);
 }
 
@@ -99,6 +99,12 @@ function getCardElement(data) {
 
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button_liked");
+  });
+
+  document.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape") {
+      closeModal(previewModal);
+    }
   });
 
   cardTrashButton.addEventListener("click", () => {
