@@ -154,3 +154,11 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
 });
+
+const allModals = document.querySelectorAll(".modal");
+
+allModals.forEach((currentModal) => {
+  currentModal.addEventListener("click", (e) => {
+    if (e.target === currentModal) closeModal(currentModal);
+  });
+});

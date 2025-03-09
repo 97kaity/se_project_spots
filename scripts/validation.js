@@ -19,7 +19,7 @@ const hideInputError = (formEl, inputEl) => {
   inputEl.classList.remove("modal__input_error");
 };
 
-const checkInputValidity = (formEl, inputEl) => {
+const checkInputValidity = (formEl, inputEl, config) => {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, inputEl.validationMessage);
   } else {
@@ -27,7 +27,7 @@ const checkInputValidity = (formEl, inputEl) => {
   }
 };
 
-const hasInvalidInput = (inputList) => {
+const hasInvalidInput = (inputList, config) => {
   return inputList.some((input) => {
     return !input.validity.valid;
   });
