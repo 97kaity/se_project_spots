@@ -153,11 +153,11 @@
   opacity: 80%;
 }
 
-.modal__submit_button_disabled {
+.modal__submit-button_disabled {
   opacity: 50%;
 }
 
-.modal__submit_button_disabled:hover {
+.modal__submit-button_disabled:hover {
   opacity: 50%;
 }
 
