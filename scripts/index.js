@@ -1,3 +1,10 @@
+import {
+  enableValidation,
+  disableButton,
+  resetValidation,
+  settings,
+} from "../scripts/validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -166,3 +173,5 @@ allModals.forEach((currentModal) => {
     if (e.target === currentModal) closeModal(currentModal);
   });
 });
+
+enableValidation(settings);
