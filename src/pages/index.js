@@ -226,6 +226,9 @@ function getCardElement(data) {
   cardNameElement.textContent = data.name;
   cardImage.alt = data.name;
   cardImage.src = data.link;
+  if (data.isLiked) {
+    cardLikeButton.classList.add("card__like-button_liked");
+  }
 
   cardLikeButton.addEventListener("click", (evt) => {
     handleLike(evt, data);

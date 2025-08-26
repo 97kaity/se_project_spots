@@ -318,7 +318,6 @@
     max-width: 156px;
     height: 52px;
     margin: 0;
-    margin-top: 20px;
   }
 
   .modal__delete-cancel-button {
@@ -337,7 +336,7 @@
 
   .modal__title-delete {
     padding: 0;
-    margin: 0;
+    margin: 12px 0 20 0;
     text-align: center;
   }
 
@@ -353,7 +352,7 @@
   }
 
   #edit-avatar-form {
-    max-width: 276px;
+    max-width: 300px;
   }
 
   .modal__submit-button-avatar {
