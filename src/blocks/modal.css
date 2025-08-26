@@ -309,30 +309,30 @@
   }
 
   .modal__content-delete {
-    width: 300px;
+    max-width: 300px;
     height: 208px;
-    top: 214px;
-    left: 10px;
     padding: 12px;
-    gap: 20px;
   }
 
   .modal__delete-submit-button {
-    width: 156px;
+    max-width: 156px;
+    height: 52px;
     margin: 0;
     margin-top: 20px;
   }
 
   .modal__delete-cancel-button {
     margin: 0;
+    height: 52px;
+    max-width: 156px;
   }
 
   .modal__form-delete {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 12px;
-    margin-left: 72px;
   }
 
   .modal__title-delete {

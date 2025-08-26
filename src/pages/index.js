@@ -46,10 +46,9 @@ const api = new Api({
 api
   .getAppInfo()
   .then(([userInfo, cards]) => {
-    document.querySelector(".profile__description").textContent =
-      userInfo.about;
-    document.querySelector(".profile__avatar").src = userInfo.avatar;
-    document.querySelector(".profile__name").textContent = userInfo.name;
+    profileDescription.textContent = userInfo.about;
+    profileAvatar.src = userInfo.avatar;
+    profileName.textContent = userInfo.name;
     cards.forEach((item) => {
       const cardElement = getCardElement(item);
       cardsList.append(cardElement);
@@ -61,6 +60,7 @@ const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
+const profileAvatar = document.querySelector(".profile__avatar");
 
 const editModal = document.querySelector("#edit-modal");
 const editFormElement = editModal.querySelector(".modal__form");
@@ -167,9 +167,9 @@ function handleAvatarSubmit(evt) {
       avatar: avatarInput.value,
     })
     .then((data) => {
-      const profileAvatar = document.querySelector(".profile__avatar");
       profileAvatar.src = data.avatar;
       avatarForm.reset();
+      disableButton(submitButton, settings);
       closeModal(avatarModal);
     })
     .catch(console.error)
@@ -236,8 +236,6 @@ function getCardElement(data) {
     openModal(deleteModal);
   });
 
-  deleteForm.addEventListener("submit", handleDeleteSubmit);
-
   cardImage.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImage.src = data.link;
@@ -294,6 +292,7 @@ deleteModalCancelButton.addEventListener("click", () => {
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleCardSubmitForm);
 avatarForm.addEventListener("submit", handleAvatarSubmit);
+deleteForm.addEventListener("submit", handleDeleteSubmit);
 
 function handleEscKey(e) {
   if (e.key === "Escape") {
